@@ -1,0 +1,20 @@
+# Kernel build outputs
+*.o
+*.ko
+*.ko.zst
+*.mod
+*.mod.c
+*.cmd
+.*.cmd
+*.d
+Module.symvers
+modules.order
+.tmp_versions/
+__pycache__/
+
+# Local test outputs and machine-specific reports
+reports/
+*.log
+*.sha256
+*.wav
+*.raw
