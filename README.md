@@ -6,6 +6,10 @@
 
 ## 日本語
 
+### 免責事項
+
+本ソフトウェアおよび関連情報は「現状有姿」で提供され、動作、安全性、特定目的への適合性について保証しません。本ソフトウェアの閲覧、ビルド、インストール、ロード、使用により、PCや周辺機器の故障・損傷、OSの停止、データの消失その他の損害が発生した場合、適用法令で認められる最大限の範囲で、著作権者および貢献者は責任を負いません。使用の判断、バックアップおよび復旧手段の準備は利用者の責任です。この免責は、適用法令上免責できない責任を排除しません。これは [GPL-2.0 の保証否認・責任制限](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) を補足する説明です。
+
 iMac18,2 の Cirrus Logic CS8409/CS42L83 音声コーデックで、内蔵マイクの録音開始経路を試作したドライバーです。既存のCS8409コードを基に、対象機種の動的ADC選択時にApple固有の録音初期化を呼び出す変更を加えています。音声処理全体を書き直すものではありません。
 
 この変更は1台の iMac18,2 で動作し、内蔵マイクから音声チャットアプリが応答することを確認しました。録音開始・停止の反復確認は20回すべて正常終了しました。これは独立した再現試験や長期安定性の保証ではありません。10分連続音声チャット、長時間録音、複数回の冷間起動、他のiMac・カーネル版は未検証です。
@@ -52,6 +56,10 @@ systemctl --user restart pipewire pipewire-pulse wireplumber
 GPL-2.0-only。元のCS8409コードは [armin-haghi/imac-cs8409-linux-audio](https://github.com/armin-haghi/imac-cs8409-linux-audio) のコミット [`b08d0745e1b78d6949d5a231d91351e73ddf8079`](https://github.com/armin-haghi/imac-cs8409-linux-audio/tree/b08d0745e1b78d6949d5a231d91351e73ddf8079) に基づきます。Linuxカーネル由来のファイルおよび各ファイル内の著作権表示も保持しています。詳細は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) を参照してください。
 
 ## English
+
+### Disclaimer
+
+This software and related information are provided “as is,” without warranties of operation, safety, or fitness for a particular purpose. To the maximum extent permitted by applicable law, the copyright holders and contributors accept no liability for damage to a computer or peripheral equipment, system failure, data loss, or other damages arising from viewing, building, installing, loading, or using this software. You are responsible for deciding whether to use it and for preparing backups and a recovery method. This disclaimer does not exclude liability that cannot be excluded under applicable law. It supplements the warranty disclaimer and limitation of liability in [GPL-2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
 An experimental CS8409/CS42L83 driver prototype for the built-in microphone on Apple iMac18,2. It adds a machine-specific callback for Apple microphone initialization when the existing driver dynamically selects an ADC. It builds on existing CS8409 code; it does not replace the audio stack.
 
